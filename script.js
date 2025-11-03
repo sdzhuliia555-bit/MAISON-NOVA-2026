@@ -10,7 +10,6 @@ const collection = [
   {id:8, category:'clothing', img:'img9.jpg'},
   {id:9, category:'clothing', img:'img10.jpg'},
   {id:10, category:'clothing', img:'img11.jpg'},
-
   // Shoes (10)
   {id:11, category:'shoes', img:'img12.jpg'},
   {id:12, category:'shoes', img:'img13.jpg'},
@@ -22,7 +21,6 @@ const collection = [
   {id:18, category:'shoes', img:'img19.jpg'},
   {id:19, category:'shoes', img:'img20.jpg'},
   {id:20, category:'shoes', img:'img21.jpg'},
-
   // Bags (10)
   {id:21, category:'bags', img:'img22.jpg'},
   {id:22, category:'bags', img:'img23.jpg'},
@@ -34,7 +32,6 @@ const collection = [
   {id:28, category:'bags', img:'img29.jpg'},
   {id:29, category:'bags', img:'img30.jpg'},
   {id:30, category:'bags', img:'img31.jpg'},
-
   // Accessories (10)
   {id:31, category:'accessories', img:'img32.jpg'},
   {id:32, category:'accessories', img:'img33.jpg'},
@@ -74,19 +71,17 @@ document.querySelectorAll('.filters button').forEach(btn => {
 
 const prev = document.getElementById('prev');
 const next = document.getElementById('next');
-const cardWidth = 220;
+const cardWidth = 240;
 
 prev.addEventListener('click', () => {
   carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
 });
-
 next.addEventListener('click', () => {
   carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
 });
 
 const form = document.getElementById('subscribeForm');
 const message = document.getElementById('message');
-
 form.addEventListener('submit', e => {
   e.preventDefault();
   const email = document.getElementById('email').value.trim();
@@ -102,5 +97,7 @@ document.querySelector('.btn').addEventListener('click', e => {
   e.preventDefault();
   document.querySelector('#collection').scrollIntoView({ behavior: 'smooth' });
 });
+
+
 
 
