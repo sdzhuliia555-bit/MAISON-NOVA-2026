@@ -1,197 +1,255 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap');
-
-:root {
-  --black: #0a0a0a;
-  --white: #f5f5f5;
-  --gray: #888;
-  --transition: all 0.4s ease;
-}
-
-* {
+body {
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background-color: #fafafa;
+  color: #222;
+  line-height: 1.6;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--black);
-  color: var(--white);
-  overflow-x: hidden;
+h1, h2 {
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-/* Hero */
 .hero {
   position: relative;
   height: 100vh;
+  background: url('hero-bg.jpg') center/cover no-repeat;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  background: url('images/img1.jpg') center/cover no-repeat; /* первая картинка фоном */
+  color: #fff;
 }
+
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.5);
-}
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 5rem;
-  margin-bottom: 20px;
-}
-.hero p {
-  font-size: 1.5rem;
-  margin-bottom: 40px;
-}
-.btn {
-  padding: 12px 40px;
-  border: 1px solid var(--white);
-  color: var(--white);
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: var(--transition);
-}
-.btn:hover {
-  background: var(--white);
-  color: var(--black);
+  background: rgba(0, 0, 0, 0.55);
 }
 
-/* Collection */
-.collection {
-  padding: 80px 20px;
-  text-align: center;
+.hero-content {
+  position: relative;
+  z-index: 1;
 }
-.collection h2 {
-  font-family: 'Playfair Display', serif;
+
+.hero h1 {
   font-size: 3rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  font-size: 1.2rem;
   margin-bottom: 20px;
 }
+
+.btn {
+  background: #fff;
+  color: #000;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.collection {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #fff;
+}
+
+.collection h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
 .filters {
   margin-bottom: 20px;
 }
+
 .filters button {
-  padding: 8px 20px;
-  margin: 0 5px;
-  border: 1px solid var(--white);
-  background: transparent;
-  color: var(--white);
+  background: none;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 8px 18px;
+  margin: 5px;
+  border-radius: 20px;
   cursor: pointer;
-  transition: var(--transition);
+  transition: 0.3s;
 }
-.filters button.active,
-.filters button:hover {
-  background: var(--white);
-  color: var(--black);
+
+.filters button:hover,
+.filters button.active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
 }
+
 .carousel {
   display: flex;
   overflow-x: auto;
+  gap: 15px;
   scroll-behavior: smooth;
-  gap: 20px;
-  padding: 20px 0;
-  max-height: 300px;
+  padding: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
+
 .carousel::-webkit-scrollbar {
   display: none;
 }
+
 .carousel-item {
   flex: 0 0 auto;
-  width: 200px;
+  width: 220px;
   height: 280px;
-  border-radius: 10px;
+  background: #f2f2f2;
+  border-radius: 15px;
   overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
+
 .carousel-item:hover {
   transform: scale(1.05);
 }
+
 .carousel-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .carousel-buttons {
-  margin-top: 10px;
-}
-.carousel-buttons button {
-  font-size: 2rem;
-  padding: 10px 20px;
-  margin: 0 10px;
-  background: transparent;
-  border: 1px solid var(--white);
-  color: var(--white);
-  cursor: pointer;
-  transition: var(--transition);
-}
-.carousel-buttons button:hover {
-  background: var(--white);
-  color: var(--black);
-}
-
-/* About */
-.about {
-  background: #111;
-  padding: 80px 20px;
-  text-align: center;
-}
-.about h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-.about p {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--gray);
-}
-
-/* Subscribe */
-.subscribe {
-  padding: 80px 20px;
-  text-align: center;
-}
-.subscribe form {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.subscribe input[type="email"] {
-  padding: 12px 20px;
-  border: 1px solid var(--gray);
-  border-radius: 4px;
-  background: transparent;
-  color: var(--white);
-  width: 280px;
-}
-.subscribe button {
-  padding: 12px 30px;
-  border: none;
-  background-color: var(--white);
-  color: var(--black);
-  cursor: pointer;
-}
-.subscribe button:hover {
-  background-color: var(--gray);
-}
-#message {
   margin-top: 20px;
-  color: var(--gray);
 }
 
-/* Footer */
-footer {
-  padding: 40px 20px;
+.carousel-buttons button {
+  background: #000;
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  margin: 0 10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.carousel-buttons button:hover {
+  background: #444;
+}
+
+.about {
+  padding: 70px 20px;
   text-align: center;
-  background: #111;
-  color: var(--gray);
+  background-color: #f8f8f8;
+}
+
+.about h2 {
+  margin-bottom: 15px;
+}
+
+.subscribe {
+  text-align: center;
+  padding: 70px 20px;
+  background-color: #fff;
+}
+
+.subscribe input[type="email"] {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.subscribe button {
+  padding: 10px 20px;
+  border: none;
+  background: #000;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.subscribe button:hover {
+  background: #333;
+}
+
+#message {
+  margin-top: 15px;
+  color: #333;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #fff;
   font-size: 0.9rem;
 }
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 15px;
+  overflow: hidden;
+  width: 90%;
+}
+
+.arrow {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.arrow:hover {
+  background: #333;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 220px;
+  height: 280px;
+  background: #f2f2f2;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
