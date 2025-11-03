@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Maison Nova 2026 — Fashion Forward</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
-
   <header class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -20,6 +19,7 @@
 
   <section id="collection" class="collection">
     <h2>Our Latest Collection</h2>
+
     <div class="filters">
       <button data-filter="all" class="active">All</button>
       <button data-filter="clothing">Clothing</button>
@@ -27,18 +27,19 @@
       <button data-filter="bags">Bags</button>
       <button data-filter="accessories">Accessories</button>
     </div>
-    <div class="carousel" id="collectionCarousel"></div>
-    <div class="carousel-buttons">
-      <button id="prev">&#10094;</button>
-      <button id="next">&#10095;</button>
+
+    <div class="carousel-container">
+      <button id="prev" class="arrow">&#10094;</button>
+      <div class="carousel" id="collectionCarousel"></div>
+      <button id="next" class="arrow">&#10095;</button>
     </div>
   </section>
 
   <section class="about">
     <h2>About Maison Nova</h2>
     <p>
-      Maison Nova represents modern fashion elegance for 2026.  
-      We combine contemporary design, bold aesthetics, and premium materials.  
+      Maison Nova represents modern fashion elegance for 2026.<br />
+      We combine contemporary design, bold aesthetics, and premium materials.<br />
       Explore our collection to immerse yourself in the latest trends.
     </p>
   </section>
@@ -46,7 +47,7 @@
   <section class="subscribe">
     <h2>Subscribe to Our Newsletter</h2>
     <form id="subscribeForm">
-      <input type="email" id="email" placeholder="Your email" required>
+      <input type="email" id="email" placeholder="Your email" required />
       <button type="submit">Subscribe</button>
     </form>
     <p id="message"></p>
@@ -55,6 +56,6 @@
   <footer>
     <p>© 2026 Maison Nova. All Rights Reserved.</p>
   </footer>
-
 </body>
 </html>
+
